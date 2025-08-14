@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ostel Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="announcement-placeholder"></div>
+
+    <header id="main-header" class="scrolled"></header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1><i>“Unbridled Healing Unleashed”</i></h1>
+                <p class="attribution">&mdash; Ashley Kostelac, Founder</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+        </section>
+
+        <section class="offers-section">
+            <h2>Ostel Place Offers</h2>
+            <div class="offer-carousel">
+                <div class="slide" style="background-image: url('media/OstelFoundation.jpg');">
+                    <h3>Ostel Foundation</h3>
+                    <p>Vets ‘n’ Pets, Ostel Youth, Healing Space at Ostel Place</p>
+                </div>
+                <div class="slide" style="background-image: url('media/TablesandSetup.jpg');">
+                    <h3>Ostel Air BnB</h3>
+                    <p>Book your stay and event at Ostel Place in our very own Air BnB!</p>
+                </div>
+                <div class="slide" style="background-image: url('media/EnglishTackBox.jpg');">
+                    <h3>Ostel LLC.</h3>
+                    <p>Party Planning! We specialize in affordable DIY party planning! With tables, chairs, linens and catering supplies at your convenience.</p>
+                </div>
+                <div class="slide" style="background-image: url('https://picsum.photos/id/1025/600/400');">
+                    <h3>Sponsorships</h3>
+                    <p>Make a direct impact by sponsoring our programs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section">
+            <div class="story-image">
+                <img src="/media/ashley.jpeg" alt="Founder's Story Portrait">
+            </div>
+            <div class="story-text">
+                <h2>My Story</h2>
+                <p>Created by Ashley Kostelac, the Ostel Foundation Nonprofit Organization emerged from a deeply personal journey of loss, healing, and resilience. Ashley's life took an unexpected turn when what was meant to be the happiest day of her life, her wedding day, instead became a funeral, a day of mourning as her husband-to-be, CW04 Richard K. Vigil, a decorated Sailor of the Year for the United States Navy, tragically lost his battle with PTSD. Richard's experiences as a service member, including multiple tours in the Middle East, left lasting scars that eventually led to his untimely passing.</p>
+                <p>The aftermath of this devastating loss left Ashley, her son, and her family grappling with their own trauma and grief. Then less than a year into this grief journey, trauma struck again in 2018 when Ashley was kidnapped and raped by a complete stranger in downtown Pensacola. Ashley and her family were riddled with PTSD and desperately trying to cope in society as a single and traumatized mother.  </p>
+                <p>Then came the opportunity for Ashley to achieve her childhood dream of having her own horses in her backyard. Through years of rebuilding their lives and seeking solace in nature, they found themselves creating Ostel Place, a sanctuary that became a source of healing and renewal for each of them. Surrounded by horses, dogs, and the tranquility of nature, they embarked on individual journeys of healing and transformation.</p>
+                <p>The profound impact of this healing environment inspired Ashley to establish Ostel Vets ‘n’ Pets, recognizing the therapeutic power of animals and nature in supporting the well-being of veterans, families, and individuals facing trauma and challenges. Drawing from her own experiences and witnessing the positive effects on her loved ones and community members, Ashley founded Ostel Vets ‘n’ Pets to provide a space where healing, connection, and hope could flourish.</p>
+                <p>As Ostel Vets ‘n’ Pets evolved into Ostel Foundation, its mission expanded to encompass a broader vision of healing and empowerment through healing with horses, nature and dogs. Today, the Ostel Foundation continues to honor Richard's memory and the journey of healing that began at Ostel Place, offering a beacon of hope and healing for all who seek solace and support on their path to wellness.</p>
+                <br>
+                
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ostel Foundation. A 501(c)3 Charitable Organization.</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.offer-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+</html>
