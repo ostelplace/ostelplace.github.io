@@ -1,7 +1,7 @@
 /* --- CSS Variables for Colors --- */
 :root {
-    --primary-color: #a56d87; 
-    --accent-gold: #a56d87; 
+    --primary-color: #c79388; 
+    --accent-gold: #c79388; 
     --dark-text: #333333;
     --light-text: #ffffff;
     --bg-light: #ffffff;
@@ -335,4 +335,5 @@ footer {
     margin: 4rem auto;
     padding: 0 2rem;
     text-align: center;
+
 }
