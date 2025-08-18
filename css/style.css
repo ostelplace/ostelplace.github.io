@@ -278,7 +278,6 @@ footer {
     border: none;
     cursor: pointer;
     z-index: 1101;
-    margin-left: 1rem;
 }
 .hamburger span {
     display: block;
@@ -324,8 +323,10 @@ footer {
 }
 .mobile-nav .cta-button {
     font-size: 1.1rem;
-    padding: 12px 0;
+    padding: 12px 30px;
     text-align: center;
+    display: inline-block;
+    border-radius: 5px;
 }
 .close-mobile-nav {
     background: none;
@@ -351,6 +352,13 @@ footer {
     }
     .hamburger {
         display: flex;
+        position: absolute;
+        top: 18px;
+        right: 24px;
+        margin: 0;
+    }
+    nav {
+        position: relative;
     }
     .mobile-nav {
         display: flex;
