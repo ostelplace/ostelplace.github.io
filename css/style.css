@@ -190,8 +190,10 @@ main {
     transition: background-color 0.3s;
 }
 
+
 .cta-button:hover {
     background-color: #c5a230;
+    color: var(--light-text) !important;
 }
 
 .cta-button.secondary {
