@@ -337,3 +337,17 @@ footer {
     text-align: center;
 
 }
+
+.book-cover {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .book-cover {
+    max-width: 90vw;
+  }
+}
