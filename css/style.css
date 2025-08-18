@@ -353,8 +353,9 @@ footer {
     .hamburger {
         display: flex;
         position: absolute;
-        top: 18px;
+        top: 50%;
         right: 24px;
+        transform: translateY(-50%);
         margin: 0;
     }
     nav {
