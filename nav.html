@@ -8,13 +8,29 @@
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
+        <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 
-    <ul>
+    <ul class="desktop-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="catalog.html">Catalog</a></li>
         <li><a href="ostel.html">Foundation</a></li>
         <li><a href="booking.html" class="cta-button">Book Now</a></li>
     </ul>
+
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+        <button class="close-mobile-nav" aria-label="Close menu">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="ostel.html">Foundation</a></li>
+            <li><a href="booking.html" class="cta-button">Book Now</a></li>
+        </ul>
+    </div>
 </nav>

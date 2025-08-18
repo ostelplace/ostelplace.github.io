@@ -27,9 +27,40 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // This function sets up all the positioning and event listeners
+
     function initializeSite() {
         const header = document.getElementById('main-header');
         const announcementBar = document.getElementById('announcement-bar');
+
+        // Hamburger & Mobile Nav logic
+        const hamburger = header.querySelector('.hamburger');
+        const mobileNav = header.querySelector('#mobile-nav');
+        const closeMobileNav = header.querySelector('.close-mobile-nav');
+
+        if (hamburger && mobileNav) {
+            hamburger.addEventListener('click', function() {
+                mobileNav.classList.add('open');
+                mobileNav.setAttribute('aria-hidden', 'false');
+                hamburger.setAttribute('aria-expanded', 'true');
+            });
+        }
+        if (closeMobileNav && mobileNav && hamburger) {
+            closeMobileNav.addEventListener('click', function() {
+                mobileNav.classList.remove('open');
+                mobileNav.setAttribute('aria-hidden', 'true');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        }
+        // Optional: close mobile nav when clicking a link
+        if (mobileNav) {
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('open');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
 
         function positionElements() {
             let announcementHeight = 0;
@@ -50,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 mainContent.style.paddingTop = '0';
             }
         }
-        
+
         if (announcementBar && header) {
             const closeBtn = announcementBar.querySelector('.close-btn');
             if (closeBtn) {
@@ -60,9 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
         }
-        
-        
-        
+
         positionElements();
     }
 
