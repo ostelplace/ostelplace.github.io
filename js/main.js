@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         positionElements();
         initializeStoryImageRotator();
+        initializeAboutCarousel();
     }
 
     function initializeStoryImageRotator() {
@@ -191,6 +192,74 @@ document.addEventListener("DOMContentLoaded", function() {
             showingFront = !showingFront;
             currentIndex = nextIndex;
         }, 5000);
+    }
+
+    function initializeAboutCarousel() {
+        const trackContainer = document.querySelector('.carousel-track-container');
+        const carouselTrack = document.querySelector('.carousel-track');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        const prevButton = document.querySelector('.carousel-control.prev');
+        const nextButton = document.querySelector('.carousel-control.next');
+        if (!trackContainer || !carouselTrack || !dotsContainer) return;
+
+        const cards = Array.from(carouselTrack.children);
+        if (!cards.length) return;
+
+        let activeIndex = 0;
+
+        dotsContainer.innerHTML = cards.map((_, index) =>
+            `<button class="carousel-dot${index === 0 ? ' active' : ''}" type="button" aria-label="View section ${index + 1}"></button>`
+        ).join('');
+
+        const dots = Array.from(dotsContainer.children);
+
+        const setActiveCard = (index) => {
+            const card = cards[index];
+            if (!card) return;
+            const left = card.offsetLeft;
+            trackContainer.scrollTo({ left, behavior: 'smooth' });
+            dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
+            activeIndex = index;
+        };
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => setActiveCard(index));
+        });
+
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                setActiveCard((activeIndex - 1 + cards.length) % cards.length);
+            });
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                setActiveCard((activeIndex + 1) % cards.length);
+            });
+        }
+
+        let scrollTimeout = null;
+        trackContainer.addEventListener('scroll', () => {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(() => {
+                const scrollLeft = trackContainer.scrollLeft;
+                let nearestIndex = 0;
+                let minDistance = Infinity;
+                cards.forEach((card, index) => {
+                    const distance = Math.abs(card.offsetLeft - scrollLeft);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        nearestIndex = index;
+                    }
+                });
+                if (nearestIndex !== activeIndex) {
+                    activeIndex = nearestIndex;
+                    dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === nearestIndex));
+                }
+            }, 50);
+        });
     }
 
     // --- Main Logic ---
