@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const photos = [];
         for (let i = 1; i <= 40; i += 1) {
-            photos.push(`media/Airbnb%20(${i}).jpg`);
+            photos.push(`media/Airbnb%20(${i}).JPG`);
         }
         for (let i = 1; i <= 10; i += 1) {
             photos.push(`media/Airbnb%20(${i}).png`);
