@@ -101,13 +101,39 @@ document.addEventListener("DOMContentLoaded", function() {
         const backImage = document.getElementById('story-image-back');
         if (!frontImage || !backImage) return;
 
-        const photos = [];
-        for (let i = 1; i <= 40; i += 1) {
-            photos.push(`media/Airbnb%20(${i}).JPG`);
-        }
-        for (let i = 1; i <= 10; i += 1) {
-            photos.push(`media/Airbnb%20(${i}).png`);
-        }
+        const photos = [
+            'media/Airbnb%20(1).JPG',
+            'media/Airbnb%20(2).JPG',
+            'media/Airbnb%20(3).JPG',
+            'media/Airbnb%20(4).JPG',
+            'media/Airbnb%20(5).JPG',
+            'media/Airbnb%20(6).JPG',
+            'media/Airbnb%20(7).JPG',
+            'media/Airbnb%20(8).JPG',
+            'media/Airbnb%20(9).JPG',
+            'media/Airbnb%20(10).JPG',
+            'media/Airbnb%20(12).JPG',
+            'media/Airbnb%20(14).JPG',
+            'media/Airbnb%20(15).JPG',
+            'media/Airbnb%20(17).JPG',
+            'media/Airbnb%20(18).JPG',
+            'media/Airbnb%20(19).JPG',
+            'media/Airbnb%20(20).JPG',
+            'media/Airbnb%20(21).JPG',
+            'media/Airbnb%20(22).JPG',
+            'media/Airbnb%20(23).JPG',
+            'media/Airbnb%20(24).JPG',
+            'media/Airbnb%20(1).png',
+            'media/Airbnb%20(2).png',
+            'media/Airbnb%20(3).png',
+            'media/Airbnb%20(4).png',
+            'media/Airbnb%20(5).png',
+            'media/Airbnb%20(6).png',
+            'media/Airbnb%20(7).png',
+            'media/Airbnb%20(8).png',
+            'media/Airbnb%20(9).png',
+            'media/Airbnb%20(10).png'
+        ];
 
         let currentIndex = 0;
         let showingFront = true;
