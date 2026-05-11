@@ -93,6 +93,41 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         positionElements();
+        initializeStoryImageRotator();
+    }
+
+    function initializeStoryImageRotator() {
+        const frontImage = document.getElementById('story-image-front');
+        const backImage = document.getElementById('story-image-back');
+        if (!frontImage || !backImage) return;
+
+        const photos = [];
+        for (let i = 1; i <= 40; i += 1) {
+            photos.push(`media/Airbnb%20(${i}).jpg`);
+        }
+        for (let i = 1; i <= 10; i += 1) {
+            photos.push(`media/Airbnb%20(${i}).png`);
+        }
+
+        let currentIndex = 0;
+        let showingFront = true;
+
+        backImage.style.opacity = '0';
+        frontImage.style.opacity = '1';
+
+        setInterval(() => {
+            const nextIndex = (currentIndex + 1) % photos.length;
+            const incoming = showingFront ? backImage : frontImage;
+            const outgoing = showingFront ? frontImage : backImage;
+
+            incoming.src = photos[nextIndex];
+            incoming.alt = `Property photo ${nextIndex + 1}`;
+            incoming.classList.add('active');
+            outgoing.classList.remove('active');
+
+            showingFront = !showingFront;
+            currentIndex = nextIndex;
+        }, 5000);
     }
 
     // --- Main Logic ---
