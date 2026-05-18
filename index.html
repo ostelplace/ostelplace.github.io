@@ -16,43 +16,107 @@
 
     <main>
         <section class="hero">
+            <video autoplay muted loop playsinline class="hero-video" poster="media/Ostel%20(1).png">
+                <source src="media/hero-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="hero-content">
-                <h1>Your Perfect Getaway Awaits</h1>
-                <p>Experience luxury and comfort at Ostel Place. Escape the ordinary and create unforgettable memories with family and friends.</p>
-                <a href="https://www.airbnb.com/rooms/944231312805183152?unique_share_id=a9ccdf10-23c5-4503-8d3f-06cb3273198e&viralityEntryPoint=1&s=76" class="cta-button">Reserve Your Stay</a>
+                <h1>Ostel Place: <br>A Private Pensacola Retreat Made for Gathering</h1>
+                <div class="hero-btns">
+                    <a href="events.html" class="cta-button">Ask About Events</a>
+                    <a href="https://www.airbnb.com/rooms/944231312805183152?unique_share_id=a9ccdf10-23c5-4503-8d3f-06cb3273198e&viralityEntryPoint=1&s=76" class="cta-button">Book Overnight Stay</a>
+                </div>
             </div>
         </section>
 
-        <section class="content-section text-center">
-            <h2>About This Space</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fa-solid fa-water-ladder"></i>
-                    <h3>Resort-Style Pool & Patio</h3>
-                    <p>Enjoy a beach-entry pool with walk-in access, deck jets, poolside bathroom, and a 1,200 sq ft solar-lit patio with string lights.</p>
+        <!-- Section 1: About the property -->
+        <section class="about-intro text-center">
+            <div class="container-narrow">
+                <h2>A Private Sanctuary in Pensacola</h2>
+                <p class="lead">Ostel Place is a premier private retreat set on over 17 acres of protected land. Designed for families, friends, and meaningful gatherings, our property offers rare privacy and luxury amenities while remaining close to everything Pensacola has to offer.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Resort-style pool and patio -->
+        <section class="feature-row">
+            <div class="feature-image">
+                <img src="media/Ostel%20(11).png" alt="Resort-style beach entry pool">
+            </div>
+            <div class="feature-text">
+                <span class="section-subtitle">Outdoor Oasis</span>
+                <h2>Resort-Style Pool & Patio</h2>
+                <p>Our highlight feature is the luxury beach-entry pool with walk-in access—perfect for all ages. Relax on the 1,200 sq ft solar-lit patio, complete with string lights and comfortable seating for evening relaxation.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Bedrooms and indoor comfort -->
+        <section class="feature-row reverse">
+            <div class="feature-image">
+                <img src="media/Ostel%20(41).png" alt="Luxury Master Suite">
+            </div>
+            <div class="feature-text">
+                <span class="section-subtitle">Rest & Restoration</span>
+                <h2>Two Private Master Suites</h2>
+                <p>Experience ultimate comfort with two king master suites situated on opposite sides of the home. Each features premium bedding and modern ensuite access, providing a spa-like retreat for every guest.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Cinema room and entertainment -->
+        <section class="feature-row">
+            <div class="feature-image">
+                <img src="media/Ostel%20(62).png" alt="Private Cinema Room">
+            </div>
+            <div class="feature-text">
+                <span class="section-subtitle">Entertainment</span>
+                <h2>Private Cinema & Media Room</h2>
+                <p>Host a movie night in our dedicated theater room. Featuring a large projection screen, high-end sound, and a wet bar, it’s the perfect hub for rainy days or evening entertainment.</p>
+            </div>
+        </section>
+
+        <!-- Section 5: Events up to 60 guests -->
+        <section class="events-banner">
+            <div class="events-content">
+                <h2>Host Your Meaningful Gathering</h2>
+                <p>Perfect for family vacations, military family visits, micro-weddings, birthday dinners, girls’ weekends, retreats, Blue Angels weekends, and small approved gatherings.</p>
+                <a href="events.html" class="cta-button">Event Details & Inquiries</a>
+            </div>
+        </section>
+
+        <!-- Section 6: Gallery preview -->
+        <section class="content-section text-center gallery-preview-section">
+            <h2>Explore the Space</h2>
+            <div class="gallery-preview-grid">
+                <div class="preview-item">
+                    <img src="media/Ostel%20(2).jpg" alt="Property View">
                 </div>
-                <div class="service-item">
-                    <i class="fa-solid fa-bed"></i>
-                    <h3>Two Master Suites</h3>
-                    <p>Two king master suites sit on opposite sides of the home for families or couples seeking privacy and comfort.</p>
+                <div class="preview-item">
+                    <img src="media/Ostel%20(5).jpg" alt="Interior Design">
                 </div>
-                <div class="service-item">
-                    <i class="fa-solid fa-film"></i>
-                    <h3>Cinema Room & Events</h3>
-                    <p>Relax in the dedicated theater room or host events up to 60 guests with add-ons available.</p>
+                <div class="preview-item">
+                    <img src="media/Ostel%20(4).png" alt="Patio Lighting">
                 </div>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="gallery.html" class="cta-button secondary">View Full Gallery</a>
             </div>
         </section>
         
-        <section class="story-section">
-            <div class="story-image">
-                <img id="story-image-front" class="story-slide book-cover active" src="media/Ostel%20(1).jpg" alt="Property photo 1">
-                <img id="story-image-back" class="story-slide book-cover" src="media/Ostel%20(2).jpg" alt="Property photo 2">
-            </div>
-            <div class="story-text">
-                <h2>Private Pensacola Retreat</h2>
-                <p>Ostel Place is your private Pensacola escape—20 minutes from white sand beaches and tucked at the end of a quiet cul-de-sac. With a resort-style pool, 1,200 sq ft solar-lit patio, chef’s kitchen, clawfoot tub, and room for 4+ cars, it’s a stay that feels private, elevated, and unforgettable.</p>
-                <a href="gallery.html" class="cta-button secondary">View Gallery</a>
+        <!-- Section 7: Booking details + Airbnb button -->
+        <section class="booking-footer-cta">
+            <div class="cta-container">
+                <div class="cta-card">
+                    <h2>Ready for Your Stay?</h2>
+                    <p>Direct bookings for overnight stays are managed exclusively through Airbnb for your protection and convenience. Check availability and secure your dates today.</p>
+                    <div class="cta-perks">
+                        <span><i class="fa-solid fa-check"></i> Superhost Support</span>
+                        <span><i class="fa-solid fa-check"></i> Keyless Entry</span>
+                        <span><i class="fa-solid fa-check"></i> 17+ Acres of Privacy</span>
+                    </div>
+                    <a href="https://www.airbnb.com/rooms/944231312805183152?unique_share_id=a9ccdf10-23c5-4503-8d3f-06cb3273198e&viralityEntryPoint=1&s=76" class="cta-button">
+                        <i class="fa-brands fa-airbnb"></i> Book Your Stay on Airbnb
+                    </a>
+                    <p class="small-text">Member of the Ostel Foundation network.</p>
+                </div>
             </div>
         </section>
     </main>
